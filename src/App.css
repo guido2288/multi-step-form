@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root{
+  /* Primary */
+  --Marineblue:hsl(213, 96%, 18%);
+  --PurplishBlue: hsl(243, 100%, 62%);
+  --PastelBlue: hsl(228, 100%, 84%);
+  --LightBluePrimary: hsl(206, 94%, 87%);
+  --StrawberryRed: hsl(354, 84%, 57%);
+
+  /* Neutral */
+  --CoolGray: hsl(231, 11%, 63%);
+  --LightGray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+main{
+  height: 100vh;
+  background-color: var(--LightBluePrimary);
+}
+
+.img_container{
+  width: 100%;
+  height: 200px;
+  background-image: url(/images/bg-sidebar-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.steps_containers{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.steps_containers li{
+  list-style: none;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  padding: 5px 10px;
+  color: var(--White);
+}
+
+.card_container{
+  height: 40vh;
+  width: 90%;
+  border-radius: 15px;
+  background-color: var(--White);
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 1rem;
+  box-shadow: 0 8px 10px var(--CoolGray);
+}
+
+.card_container h2{
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--Marineblue);
+  margin-bottom: 1rem;
+}
+
+.card_container p{
+  margin-bottom: 1rem;
+  color: var(--CoolGray);
+}
+
+.card_container form{
+  display: flex;
+  flex-direction: column;
+}
+
+.card_container form label{
+  color: var(--Marineblue);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.card_container form input{
+  margin-bottom: 0.8rem;
+  padding: 0.7rem;
+  border: 1px solid var(--CoolGray);
+  border-radius: 5px;
+  color: var(--Marineblue);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+input:focus-visible{
+  outline: 1px solid var(--Marineblue);
+}
+
+footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  position: absolute;
+  bottom: 5%;
+}
+
+footer .button_next{
+  cursor: pointer;
+  font-weight: bolder;
+  color: var(--White);
+  border: none;
+  background-color: var(--Marineblue);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+footer .button_back{
+  color: var(--CoolGray);
+  cursor: pointer;
+  border: none;
+  background-color: var(--LightBluePrimary);
+}
