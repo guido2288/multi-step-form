@@ -1,3 +1,5 @@
+import './PersonalInfo.css';
+
 const PersonalInfo = () => {
   return (
     <section className='card_container'>

@@ -1,0 +1,40 @@
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    position: absolute;
+    bottom: 5%;
+}
+  
+footer .button_next{
+    cursor: pointer;
+    font-weight: bolder;
+    color: var(--White);
+    border: none;
+    background-color: var(--Marineblue);
+    padding: 1rem;
+    border-radius: 5px;
+}
+  
+footer .button_back{
+    color: var(--CoolGray);
+    cursor: pointer;
+    border: none;
+    background-color: var(--LightBluePrimary);
+}
+
+@media (min-width: 940px) {
+    footer{
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        position: absolute;
+        bottom: 5%;
+        right: 36px;
+    }
+    footer .button_back{
+        background-color: var(--White);
+    }
+}

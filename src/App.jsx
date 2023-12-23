@@ -1,27 +1,22 @@
 import './App.css'
+import Footer from './components/Footer'
 import PersonalInfo from './components/PersonalInfo'
+import PlanSelect from './components/PlanSelect'
+import Steps from './components/Steps'
 
 function App() {
 
   return (
   <main>
     <aside className="img_container">
-        <ul className='steps_containers'>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-        </ul>
+      <Steps />
     </aside>
 
-    <PersonalInfo />
+    {/* <PersonalInfo /> */}
 
+    <PlanSelect />
 
-
-    <footer>
-      <button className='button_back'>Go Back</button>
-      <button className='button_next'>Next Step</button>
-    </footer>
+    <Footer />
   </main>
 
   )
