@@ -1,6 +1,7 @@
 import './App.css'
 import Footer from './components/Footer'
 import PersonalInfo from './components/PersonalInfo'
+import PickAdd from './components/PickAdd'
 import PlanSelect from './components/PlanSelect'
 import Steps from './components/Steps'
 
@@ -14,7 +15,9 @@ function App() {
 
     {/* <PersonalInfo /> */}
 
-    <PlanSelect />
+    {/* <PlanSelect /> */}
+
+    <PickAdd />
 
     <Footer />
   </main>
