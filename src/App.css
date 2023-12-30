@@ -3,6 +3,7 @@
 :root{
   /* Primary */
   --Marineblue:hsl(213, 96%, 18%);
+  --MarineblueLight:hsl(215, 71%, 22%);
   --PurplishBlue: hsl(243, 100%, 62%);
   --PastelBlue: hsl(228, 100%, 84%);
   --LightBluePrimary: hsl(206, 94%, 87%);

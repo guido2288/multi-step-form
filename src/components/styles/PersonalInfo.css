@@ -29,6 +29,7 @@
   }
   
   .card_container form label{
+    position: relative;
     color: var(--Marineblue);
     font-size: 0.8rem;
     font-weight: 500;
@@ -43,6 +44,13 @@
     color: var(--Marineblue);
     font-weight: bolder;
     cursor: pointer;
+}
+.error_msg{
+  color: var(--StrawberryRed);
+  font-size: 0.8rem;
+  position: absolute;
+  right: 16px;
+  font-weight: 700;
 }
 
 @media (min-width: 940px){

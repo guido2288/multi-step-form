@@ -1,10 +1,11 @@
 import './styles/Steps.css';
 
-const Steps = () => {
+const Steps = ({step}) => {
+
   return (
     <ul className='steps_containers'>
     <li>
-      <span>1</span>
+      <span >1</span>
       <div className='steps_item'>
         <p className='step'>STEP 1</p>
         <p>YOUR INFO</p>

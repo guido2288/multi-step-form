@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import Footer from './components/Footer'
 import Laststep from './components/Laststep'
@@ -9,23 +10,35 @@ import Summary from './components/Summary'
 
 function App() {
 
+  const [step, setStep] = useState(1);
+
   return (
   <main>
     <aside className="img_container">
-      <Steps />
+      <Steps step={step}/>
     </aside>
 
-    <PersonalInfo />
+    {
+      step === 1 && <PersonalInfo setStep={setStep} />
+    }
 
-    {/* <PlanSelect /> */}
+    {
+      step === 2 && <PlanSelect />
+    }
 
-    {/* <PickAdd /> */}
+    {
+      step === 3 && <PickAdd />
+    }
 
-    {/* <Summary /> */}
+    {
+      step === 4 && <Summary />
+    }
+    {
+      step === 5 && <Laststep />
+    }
 
-    {/* <Laststep /> */}
 
-    <Footer />
+    <Footer step={step} setStep={setStep} />
   </main>
 
   )

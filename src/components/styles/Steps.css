@@ -21,6 +21,11 @@ li span{
     display: none;
 }
 @media (min-width: 940px) {
+  li span{
+    border: solid 1px var(--White);
+    border-radius: 50%;
+    padding: 10px 15px;
+}
     .steps_containers{
         flex-direction: column;
         align-items: start;
