@@ -1,4 +1,4 @@
-import './Steps.css';
+import './styles/Steps.css';
 
 const Steps = () => {
   return (

@@ -1,9 +1,11 @@
 import './App.css'
 import Footer from './components/Footer'
+import Laststep from './components/Laststep'
 import PersonalInfo from './components/PersonalInfo'
 import PickAdd from './components/PickAdd'
 import PlanSelect from './components/PlanSelect'
 import Steps from './components/Steps'
+import Summary from './components/Summary'
 
 function App() {
 
@@ -13,11 +15,15 @@ function App() {
       <Steps />
     </aside>
 
-    {/* <PersonalInfo /> */}
+    <PersonalInfo />
 
     {/* <PlanSelect /> */}
 
-    <PickAdd />
+    {/* <PickAdd /> */}
+
+    {/* <Summary /> */}
+
+    {/* <Laststep /> */}
 
     <Footer />
   </main>

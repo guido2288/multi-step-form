@@ -1,4 +1,4 @@
-import './PickAdd.css';
+import './styles/PickAdd.css';
 
 
 const PickAdd = () => {
@@ -11,7 +11,7 @@ const PickAdd = () => {
     <form className='pickAdd_section'>
 
         <div className='option_container'>
-            <input type="checkbox" id='switch'/>
+            <input type="checkbox" />
             <div className='option_text'>
                 <label htmlFor="switch">Online Service</label>
                 <p>Access to multiplayer games</p>
@@ -22,7 +22,7 @@ const PickAdd = () => {
         </div>
 
         <div className='option_container'>
-        <input type="checkbox" id='switch'/>
+        <input type="checkbox" />
             <div className='option_text'>
                 <label htmlFor="switch">Larger storage</label>
                 <p>Extra 1TB of cloud save</p>
@@ -31,7 +31,7 @@ const PickAdd = () => {
         </div>
 
         <div className='option_container'>
-        <input type="checkbox" id='switch'/>
+        <input type="checkbox" />
             <div className='option_text'>
                 <label htmlFor="switch">Customizable profile</label>
                 <p>Custom theme on your profile</p>

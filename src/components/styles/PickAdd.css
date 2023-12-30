@@ -1,10 +1,11 @@
+
 .pick_card{
-    height: 45vh;
+    height: 50vh;
     width: 90%;
     border-radius: 15px;
     background-color: var(--White);
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 2rem 1rem;
@@ -24,7 +25,7 @@
 .option_container{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 20px 0;
     border: solid 1px var(--CoolGray);
     padding: 1rem;

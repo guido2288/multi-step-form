@@ -10,11 +10,21 @@
     padding: 2rem 1rem;
     box-shadow: 0 8px 10px var(--CoolGray);
 }
+.plan_card h2{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--Marineblue);
+    margin-bottom: 1rem;
+}
+.plan_card p{
+    margin-bottom: 1rem;
+    color: var(--CoolGray);
+}
 
 .plans_container{
     display: flex;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     gap: 15px;
 }
 
@@ -50,7 +60,7 @@
     font-weight: 700;
 }
 
-input[type=checkbox]{
+#switch{
     height: 0;
     width: 0;
     visibility: hidden;

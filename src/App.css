@@ -44,7 +44,6 @@ input:focus-visible{
 }
 
 
-
 @media (min-width: 940px) {
   body{
     background-color: var(--LightBluePrimary);

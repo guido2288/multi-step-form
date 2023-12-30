@@ -1,4 +1,4 @@
-import './PlanSelect.css';
+import './styles/PlanSelect.css';
 
 const PlanSelect = () => {
   return (

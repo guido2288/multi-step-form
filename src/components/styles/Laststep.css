@@ -1,0 +1,33 @@
+.modal{
+    height: 45vh;
+    width: 90%;
+    border-radius: 15px;
+    background-color: var(--White);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 1rem;
+    box-shadow: 0 8px 10px var(--CoolGray);
+    text-align: center;
+}
+.modal h2{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--Marineblue);
+    margin: 1rem 0;
+}
+
+.modal p{
+    color: var(--CoolGray);
+    line-height: 25px;
+}
+@media (min-width: 940px){
+    .modal{
+        height: 45vh;
+        width: 450px;
+        top: 60%;
+        left: 70%;
+        box-shadow: none;
+    }
+}
