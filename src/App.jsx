@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import Footer from './components/Footer'
+
+
 import Laststep from './components/Laststep'
 import PersonalInfo from './components/PersonalInfo'
 import PickAdd from './components/PickAdd'
@@ -8,9 +9,16 @@ import PlanSelect from './components/PlanSelect'
 import Steps from './components/Steps'
 import Summary from './components/Summary'
 
+
 function App() {
 
   const [step, setStep] = useState(1);
+
+  const handleBackBtn = () => {
+    let backStep = step - 1;
+
+    setStep(backStep)
+  } 
 
   return (
   <main>
@@ -38,7 +46,13 @@ function App() {
     }
 
 
-    <Footer step={step} setStep={setStep} />
+  <footer>
+      {
+        step != 1 && <button className='button_back' onClick={handleBackBtn}>Go Back</button>
+      }
+      
+      <button className='button_next' type='submit' form='personalInfo'>Next Step</button>
+    </footer>
   </main>
 
   )

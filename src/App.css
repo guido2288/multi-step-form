@@ -44,6 +44,42 @@ input:focus-visible{
   outline: 1px solid var(--Marineblue);
 }
 
+footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+  position: absolute;
+  bottom: 5%;
+}
+
+footer .button_next{
+
+  font-weight: bolder;
+  color: var(--White);
+  border: none;
+  background-color: var(--Marineblue);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+footer .button_next:hover{
+  cursor: pointer;
+  background-color: var(--MarineblueLight);
+}
+
+footer .button_back{
+  color: var(--CoolGray);
+  border: none;
+  font-weight: 700;
+  background-color: var(--LightBluePrimary);
+}
+
+footer .button_back:hover{
+  cursor: pointer;
+  color: var(--Marineblue);
+}
+
 
 @media (min-width: 940px) {
   body{
@@ -70,5 +106,18 @@ input:focus-visible{
     background-position: center;
     border-radius: 15px;
   }
+
+  footer{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    position: absolute;
+    bottom: 5%;
+    right: 36px;
+}
+footer .button_back{
+    background-color: var(--White);
+}
 
 }
