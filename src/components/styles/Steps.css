@@ -16,6 +16,11 @@ li span{
     border-radius: 50%;
     padding: 5px 10px;
 }
+
+.step_highlighted{
+  background-color: var(--LightBluePrimary);
+  color: var(--MarineblueLight);
+}
   
 .steps_item{
     display: none;
