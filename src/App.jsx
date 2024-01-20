@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import './App.css'
-
+import { Outlet } from 'react-router-dom'
 
 import Laststep from './components/Laststep'
 import PersonalInfo from './components/PersonalInfo'
@@ -8,6 +7,7 @@ import PickAdd from './components/PickAdd'
 import PlanSelect from './components/PlanSelect'
 import Steps from './components/Steps'
 import Summary from './components/Summary'
+import './App.css'
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
       <Steps step={step}/>
     </aside>
 
-    {
+    {/* {
       step === 1 && <PersonalInfo setStep={setStep} />
     }
 
@@ -43,7 +43,9 @@ function App() {
     }
     {
       step === 5 && <Laststep />
-    }
+    } */}
+
+    <Outlet />
 
 
   <footer>

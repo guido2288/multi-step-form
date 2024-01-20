@@ -2,8 +2,6 @@ import './styles/Steps.css';
 
 const Steps = ({step}) => {
 
-  console.log(step)
-
   return (
     <ul className='steps_containers'>
     <li>

@@ -24,7 +24,7 @@
 .plans_container{
     display: flex;
     flex-direction: column;
-    padding: 1rem 1rem;
+    padding: 1rem 0;
     gap: 15px;
 }
 
@@ -35,7 +35,16 @@
     border-radius: 10px;
     padding: 1rem;
     gap: 20px;
+}
+
+.plan_selected{
+    background-color: var(--Magnolia);
+    border: 1px solid var(--PurplishBlue);
+}
+
+.plan_selection:hover{
     cursor: pointer;
+    border: 1px solid var(--PurplishBlue);
 }
 
 .plan_price p{
