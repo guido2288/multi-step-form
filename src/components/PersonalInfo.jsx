@@ -7,7 +7,7 @@ const PersonalInfo = () => {
 
   const {register , handleSubmit , formState : {errors} , watch} = useForm();
 
-  const [, dispatch] =  useRegFormContext();
+  const [state, dispatch] =  useRegFormContext();
 
   const navigate = useNavigate();
 
@@ -15,11 +15,11 @@ const PersonalInfo = () => {
     //Data contiene los datos
     dispatch( {type:'SET_INFO_DATA' , data: values} )
     dispatch( {type:'CHANGE_STEP' , data: 2} )
- 
     navigate('/plan_select')
-    console.log(values)
     
   } )
+
+  
 
   return (
     <>

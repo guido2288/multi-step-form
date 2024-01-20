@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
+import { useRegFormContext } from "../provider/RegFormProvider";
 import "./styles/Summary.css";
 
 const Summary = () => {
+
+    const [state , dispatch] =  useRegFormContext();
+
+    const navigate = useNavigate();
+
   return (
     <>
     <section className='summary'>
@@ -11,10 +18,13 @@ const Summary = () => {
 
             <div className="info_item">
                 <div className="info_plan">
-                    <span className="plan_selected">Arcade (Monthly)</span>
+                    <span className="plan_selected">{state.plan} ({state.pay})</span>
                     <p>Change</p>
                 </div>
-                <span>$90/yr</span>
+                {
+                    state.pay == 'Yearly' ? <span>+{state.planValue}/yr</span> : <span>+{state.planValue}/mo</span>
+                }
+                
             </div>
 
 
@@ -47,7 +57,7 @@ const Summary = () => {
     <button className='button_back' >Go Back</button>
 
 
-    <button className='button_next' type='submit' form='planSelect'>Next Step</button>
+    <button className='button_next' type='submit' form='planSelect'>Confirm</button>
     </footer>
     </>
   )

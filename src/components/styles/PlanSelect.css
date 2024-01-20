@@ -47,6 +47,12 @@
     border: 1px solid var(--PurplishBlue);
 }
 
+.plan_price{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .plan_price p{
     color: var(--Marineblue);
     font-weight: 700;

@@ -12,10 +12,16 @@ const reducer = (state , action) => {
             {return {...state , info: {...action.data} };}
            
         case 'SET_PLAN_DATA':
-            {return {...state ,  plan: {...action.data} };}
+            {return {...state ,  plan: action.data };}
+
+        case 'SET_PAY_DATA':
+            {return {...state ,  pay: action.data };}
    
         case 'SET_ADDONS_DATA':
-            {return {...state ,  addOns: {...action.data} };}
+            {return {...state ,  addOns: action.data };}
+
+        case 'SET_PLANVALUE':
+            {return {...state ,  planValue: action.data };}
       
         case 'CHANGE_STEP':
             {return {...state , step: action.data };}
@@ -39,8 +45,11 @@ const RegFormProvider = ({ children }) => {
     phone:
     plan:
     pay:
-    add_ons: []
-    
+    add_ons: [{
+        name:
+        value:
+    }]
+    planValue:
 }
 */
 
