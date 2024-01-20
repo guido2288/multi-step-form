@@ -17,12 +17,13 @@ const PlanSelect = () => {
   }
 
   return (
-    <section className='plan_card'>
+    <>
+        <section className='plan_card'>
       <h2>Select your plan</h2>
       <p>You have the option of monthly or yearly billing.</p>
 
       
-    <form className='plans_container'>
+    <form className='plans_container' id="planSelect">
 
         <div className={ plan == "Arcade" ? 'plan_selection plan_selected' : 'plan_selection'} onClick={() => handleSelection('Arcade')}>
             <img src="./images/icon-arcade.svg" alt="arcade" />
@@ -59,6 +60,15 @@ const PlanSelect = () => {
 
 
     </section>
+
+    <footer>
+        <button className='button_back' >Go Back</button>
+        
+      
+        <button className='button_next' type='submit' form='planSelect'>Next Step</button>
+      </footer>
+    </>
+
   )
 }
 

@@ -9,21 +9,21 @@ export const useRegFormContext = () => {
 const reducer = (state , action) => {
     switch (action.type) {
         case 'SET_INFO_DATA':
-            return {...state , info: {...action.data} };
-            break;
+            {return {...state , info: {...action.data} };}
+           
         case 'SET_PLAN_DATA':
-            return {...state ,  plan: {...action.data} };
-            break;
+            {return {...state ,  plan: {...action.data} };}
+   
         case 'SET_ADDONS_DATA':
-            return {...state ,  addOns: {...action.data} };
-            break;
+            {return {...state ,  addOns: {...action.data} };}
+      
         case 'CHANGE_STEP':
-            return {...state , step: action.data };
+            {return {...state , step: action.data };}
     }
     return state;
 }
 
-const RegFormContext = ({ children }) => {
+const RegFormProvider = ({ children }) => {
     const [state , dispatch]  =  useReducer(reducer , { step: 0 } );
 
 
@@ -32,5 +32,16 @@ const RegFormContext = ({ children }) => {
     </RegFormContext.Provider>
 }
 
+/* Modelo de datos
+{
+    name:
+    email:
+    phone:
+    plan:
+    pay:
+    add_ons: []
+    
+}
+*/
 
-export default RegFormContext;
+export default RegFormProvider;

@@ -2,6 +2,7 @@ import "./styles/Summary.css";
 
 const Summary = () => {
   return (
+    <>
     <section className='summary'>
       <h2>Finishing up</h2>
       <p>Double-check everything looks OK before confirming.</p>
@@ -41,6 +42,14 @@ const Summary = () => {
       
     
     </section>
+
+    <footer>
+    <button className='button_back' >Go Back</button>
+
+
+    <button className='button_next' type='submit' form='planSelect'>Next Step</button>
+    </footer>
+    </>
   )
 }
 

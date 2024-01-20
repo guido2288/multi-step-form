@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 
 import Laststep from './components/Laststep'
@@ -8,55 +7,23 @@ import PlanSelect from './components/PlanSelect'
 import Steps from './components/Steps'
 import Summary from './components/Summary'
 import './App.css'
+import RegFormProvider from './provider/RegFormProvider'
 
 
 function App() {
 
-  const [step, setStep] = useState(1);
 
-  const handleBackBtn = () => {
-    let backStep = step - 1;
-
-    setStep(backStep)
-  } 
 
   return (
-  <main>
-    <aside className="img_container">
-      <Steps step={step}/>
-    </aside>
+    <RegFormProvider>
+      <main>
+        <aside className="img_container">
+          <Steps />
+        </aside>
 
-    {/* {
-      step === 1 && <PersonalInfo setStep={setStep} />
-    }
-
-    {
-      step === 2 && <PlanSelect />
-    }
-
-    {
-      step === 3 && <PickAdd />
-    }
-
-    {
-      step === 4 && <Summary />
-    }
-    {
-      step === 5 && <Laststep />
-    } */}
-
-    <Outlet />
-
-
-  <footer>
-      {
-        step != 1 && <button className='button_back' onClick={handleBackBtn}>Go Back</button>
-      }
-      
-      <button className='button_next' type='submit' form='personalInfo'>Next Step</button>
-    </footer>
-  </main>
-
+        <Outlet />
+    </main>
+  </RegFormProvider>
   )
 }
 
