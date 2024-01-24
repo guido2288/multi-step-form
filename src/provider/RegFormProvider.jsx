@@ -22,6 +22,7 @@ const reducer = (state , action) => {
 
         case 'SET_PLANVALUE':
             {return {...state ,  planValue: action.data };}
+
       
         case 'CHANGE_STEP':
             {return {...state , step: action.data };}
@@ -50,6 +51,9 @@ const RegFormProvider = ({ children }) => {
         value:
     }]
     planValue:
+    add_onsValue=[
+
+    ]
 }
 */
 

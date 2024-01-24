@@ -9,15 +9,22 @@ const PickAdd = () => {
 
     const {handleSubmit  } = useForm();
 
-    const [add_ons, setAdd_ons] = useState([])
+    const [add_ons, setAdd_ons] = useState([]);
 
     const [state , dispatch] =  useRegFormContext();
 
     const navigate = useNavigate();
+
+    const handleGoBack = () => {
+        dispatch( {type:'CHANGE_STEP' , data: 2} )
+        navigate('/plan_select')
+      }
     
     const onSubmit = () => {
         dispatch( {type:'SET_ADDONS_DATA' , data: add_ons} )
         dispatch( {type:'CHANGE_STEP' , data: 4} )
+  
+
 
         navigate('/summary')
     }
@@ -87,7 +94,7 @@ const PickAdd = () => {
     </section>
 
     <footer>
-        <button className='button_back' >Go Back</button>
+        <button className='button_back' onClick={handleGoBack}>Go Back</button>
 
 
         <button className='button_next' type='submit' form='pickAdd'>Next Step</button>

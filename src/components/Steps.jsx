@@ -5,8 +5,6 @@ const Steps = () => {
 
   const [state] = useRegFormContext();
 
-  console.log(state)
-
   return (
     <ul className='steps_containers'>
     <li>

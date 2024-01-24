@@ -1,13 +1,49 @@
 import { useNavigate } from "react-router-dom";
 import { useRegFormContext } from "../provider/RegFormProvider";
 import "./styles/Summary.css";
+import { useEffect, useState } from "react";
+import AddOnsListYear from "./AddOnsListYear";
+import AddOnsListMonth from "./AddOnsListMonth";
+import { useForm } from "react-hook-form";
 
 const Summary = () => {
+    const {handleSubmit  } = useForm();
 
     const [state , dispatch] =  useRegFormContext();
 
+    const [addsValues, setAddsValues] = useState()
+
     const navigate = useNavigate();
 
+    const handleGoBack = () => {
+        dispatch( {type:'CHANGE_STEP' , data: 3} )
+        navigate('/pick_add')
+      }
+
+    useEffect( () => {
+
+        let total = state.planValue;
+        if(state.pay === 'Yearly' && state.addOns.length > 0){
+            state.addOns.forEach(add => {
+                add === 'Online Service' ? total += 10 : total += 20;
+            });
+        } else {
+            state.addOns.forEach(add => {
+                add === 'Online Service' ? total += 1 : total += 2;
+            });
+        }
+
+        setAddsValues(total)
+
+    }, [])
+
+    const onSubmit = () => {
+       
+        dispatch( {type:'CHANGE_STEP' , data: 5} )
+  
+        navigate('/laststep')
+    }
+    
   return (
     <>
     <section className='summary'>
@@ -27,37 +63,28 @@ const Summary = () => {
                 
             </div>
 
-
-            <ul>
-                <li>
-                    <h4>Online service</h4>
-                    <span>+$10/yr</span>
-                </li>
-                <li>
-                    <h4>Larger Storage</h4>
-                    <span>+$20/yr</span>
-                </li>
-                <li>
-                    <h4>Customizable profile</h4>
-                    <span>+$20/yr</span>
-                </li>
-            </ul>
+            {
+                state.pay == 'Yearly' ? <AddOnsListYear addOns={state.addOns} /> : <AddOnsListMonth addOns={state.addOns} />
+            }
 
         </div>
 
         <div className="total_container">
-            <h4>Total (per year)</h4>
-            <span>$140/yr</span>
+            <h4>Total { state.pay === 'Yearly' ? "(per year)" : "(per month)" }</h4>
+            {
+                state.pay == 'Yearly' ? <span>${addsValues}/yr</span> : <span>${addsValues}/mo</span>
+            }
+            
         </div>
       
     
     </section>
 
     <footer>
-    <button className='button_back' >Go Back</button>
+    <button className='button_back' onClick={handleGoBack} >Go Back</button>
 
 
-    <button className='button_next' type='submit' form='planSelect'>Confirm</button>
+    <button className='button_next' type='submit' form='planSelect' onClick={handleSubmit(onSubmit)}>Confirm</button>
     </footer>
     </>
   )
